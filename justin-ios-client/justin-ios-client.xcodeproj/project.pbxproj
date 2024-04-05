@@ -14,6 +14,7 @@
 		9B48DC212BC084BE0046AF7A /* justin_ios_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DC202BC084BE0046AF7A /* justin_ios_clientTests.swift */; };
 		9B48DC2B2BC084BE0046AF7A /* justin_ios_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DC2A2BC084BE0046AF7A /* justin_ios_clientUITests.swift */; };
 		9B48DC2D2BC084BE0046AF7A /* justin_ios_clientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DC2C2BC084BE0046AF7A /* justin_ios_clientUITestsLaunchTests.swift */; };
+		9B48DC3A2BC08A550046AF7A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48DC392BC08A550046AF7A /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9B48DC262BC084BE0046AF7A /* justin-ios-clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "justin-ios-clientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B48DC2A2BC084BE0046AF7A /* justin_ios_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justin_ios_clientUITests.swift; sourceTree = "<group>"; };
 		9B48DC2C2BC084BE0046AF7A /* justin_ios_clientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justin_ios_clientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B48DC392BC08A550046AF7A /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		9B48DC0E2BC084BC0046AF7A /* justin-ios-client */ = {
 			isa = PBXGroup;
 			children = (
+				9B48DC392BC08A550046AF7A /* ContentViewModel.swift */,
 				9B48DC0F2BC084BC0046AF7A /* justin_ios_clientApp.swift */,
 				9B48DC112BC084BC0046AF7A /* ContentView.swift */,
 				9B48DC132BC084BE0046AF7A /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			files = (
 				9B48DC122BC084BC0046AF7A /* ContentView.swift in Sources */,
 				9B48DC102BC084BC0046AF7A /* justin_ios_clientApp.swift in Sources */,
+				9B48DC3A2BC08A550046AF7A /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
