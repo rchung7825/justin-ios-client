@@ -70,20 +70,19 @@ struct ContentView: View {
     }
     
     
-    func speak(_ text: String) {
-        guard let voice = selectedVoice else {
-            print("No voice available")
+    func speak(_ word: String) {
+        guard let mp3file = Bundle.main.url(forResource: "sound/\(word)", withExtension: "mp3") else {
+            print("MP3 file not found for '\(word)' ")
             return
         }
-        
-        let synthesizer = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = voice
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() ) {
-            synthesizer.speak(utterance)
+        do {
+            let audioPlayer = try AVAudioPlayer(contentsOf: mp3file)
+            audioPlayer.play()
+        } catch {
+            print("Error playing audio: \(error.localizedDescription)")
         }
     }
+    
     func checkAvailableVoices() {
         let voices = AVSpeechSynthesisVoice.speechVoices()
         if let preferredVoice = voices.first(where: { $0.language == "en-US" }) {
