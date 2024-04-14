@@ -24,7 +24,7 @@ exists ffmpeg
 exists mp3wrap     # Well, ffmpeg can also concat:  "search:  and find askubuntu.com" answer.
 exists sox
 
-accel_rate=1.8    # 80% faster
+accel_rate=2       # twice as fast.  (It was 1.8)
 generate_accel()
 {
     fname=$1
