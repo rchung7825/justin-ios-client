@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76671DD02BCB91730017F86B /* jusin_ios_client2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76671DCF2BCB91730017F86B /* jusin_ios_client2App.swift */; };
+		76671DD22BCB91730017F86B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76671DD12BCB91730017F86B /* ContentView.swift */; };
+		76671DD42BCB91750017F86B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76671DD32BCB91750017F86B /* Assets.xcassets */; };
+		76671DD72BCB91750017F86B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76671DD62BCB91750017F86B /* Preview Assets.xcassets */; };
+		76671DE12BCB91750017F86B /* jusin_ios_client2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76671DE02BCB91750017F86B /* jusin_ios_client2Tests.swift */; };
+		76671DEB2BCB91750017F86B /* jusin_ios_client2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76671DEA2BCB91750017F86B /* jusin_ios_client2UITests.swift */; };
+		76671DED2BCB91750017F86B /* jusin_ios_client2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76671DEC2BCB91750017F86B /* jusin_ios_client2UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76671DDD2BCB91750017F86B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76671DC42BCB91730017F86B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76671DCB2BCB91730017F86B;
+			remoteInfo = "jusin-ios-client2";
+		};
+		76671DE72BCB91750017F86B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76671DC42BCB91730017F86B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76671DCB2BCB91730017F86B;
+			remoteInfo = "jusin-ios-client2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76671DCC2BCB91730017F86B /* jusin-ios-client2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jusin-ios-client2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76671DCF2BCB91730017F86B /* jusin_ios_client2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jusin_ios_client2App.swift; sourceTree = "<group>"; };
+		76671DD12BCB91730017F86B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76671DD32BCB91750017F86B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76671DD62BCB91750017F86B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		76671DDC2BCB91750017F86B /* jusin-ios-client2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jusin-ios-client2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76671DE02BCB91750017F86B /* jusin_ios_client2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jusin_ios_client2Tests.swift; sourceTree = "<group>"; };
+		76671DE62BCB91750017F86B /* jusin-ios-client2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jusin-ios-client2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76671DEA2BCB91750017F86B /* jusin_ios_client2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jusin_ios_client2UITests.swift; sourceTree = "<group>"; };
+		76671DEC2BCB91750017F86B /* jusin_ios_client2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jusin_ios_client2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76671DC92BCB91730017F86B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DD92BCB91750017F86B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DE32BCB91750017F86B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76671DC32BCB91730017F86B = {
+			isa = PBXGroup;
+			children = (
+				76671DCE2BCB91730017F86B /* jusin-ios-client2 */,
+				76671DDF2BCB91750017F86B /* jusin-ios-client2Tests */,
+				76671DE92BCB91750017F86B /* jusin-ios-client2UITests */,
+				76671DCD2BCB91730017F86B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76671DCD2BCB91730017F86B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76671DCC2BCB91730017F86B /* jusin-ios-client2.app */,
+				76671DDC2BCB91750017F86B /* jusin-ios-client2Tests.xctest */,
+				76671DE62BCB91750017F86B /* jusin-ios-client2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76671DCE2BCB91730017F86B /* jusin-ios-client2 */ = {
+			isa = PBXGroup;
+			children = (
+				76671DCF2BCB91730017F86B /* jusin_ios_client2App.swift */,
+				76671DD12BCB91730017F86B /* ContentView.swift */,
+				76671DD32BCB91750017F86B /* Assets.xcassets */,
+				76671DD52BCB91750017F86B /* Preview Content */,
+			);
+			path = "jusin-ios-client2";
+			sourceTree = "<group>";
+		};
+		76671DD52BCB91750017F86B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				76671DD62BCB91750017F86B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76671DDF2BCB91750017F86B /* jusin-ios-client2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				76671DE02BCB91750017F86B /* jusin_ios_client2Tests.swift */,
+			);
+			path = "jusin-ios-client2Tests";
+			sourceTree = "<group>";
+		};
+		76671DE92BCB91750017F86B /* jusin-ios-client2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				76671DEA2BCB91750017F86B /* jusin_ios_client2UITests.swift */,
+				76671DEC2BCB91750017F86B /* jusin_ios_client2UITestsLaunchTests.swift */,
+			);
+			path = "jusin-ios-client2UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76671DCB2BCB91730017F86B /* jusin-ios-client2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76671DF02BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2" */;
+			buildPhases = (
+				76671DC82BCB91730017F86B /* Sources */,
+				76671DC92BCB91730017F86B /* Frameworks */,
+				76671DCA2BCB91730017F86B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jusin-ios-client2";
+			productName = "jusin-ios-client2";
+			productReference = 76671DCC2BCB91730017F86B /* jusin-ios-client2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76671DDB2BCB91750017F86B /* jusin-ios-client2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76671DF32BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2Tests" */;
+			buildPhases = (
+				76671DD82BCB91750017F86B /* Sources */,
+				76671DD92BCB91750017F86B /* Frameworks */,
+				76671DDA2BCB91750017F86B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76671DDE2BCB91750017F86B /* PBXTargetDependency */,
+			);
+			name = "jusin-ios-client2Tests";
+			productName = "jusin-ios-client2Tests";
+			productReference = 76671DDC2BCB91750017F86B /* jusin-ios-client2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76671DE52BCB91750017F86B /* jusin-ios-client2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76671DF62BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2UITests" */;
+			buildPhases = (
+				76671DE22BCB91750017F86B /* Sources */,
+				76671DE32BCB91750017F86B /* Frameworks */,
+				76671DE42BCB91750017F86B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76671DE82BCB91750017F86B /* PBXTargetDependency */,
+			);
+			name = "jusin-ios-client2UITests";
+			productName = "jusin-ios-client2UITests";
+			productReference = 76671DE62BCB91750017F86B /* jusin-ios-client2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76671DC42BCB91730017F86B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					76671DCB2BCB91730017F86B = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					76671DDB2BCB91750017F86B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 76671DCB2BCB91730017F86B;
+					};
+					76671DE52BCB91750017F86B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 76671DCB2BCB91730017F86B;
+					};
+				};
+			};
+			buildConfigurationList = 76671DC72BCB91730017F86B /* Build configuration list for PBXProject "jusin-ios-client2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76671DC32BCB91730017F86B;
+			productRefGroup = 76671DCD2BCB91730017F86B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76671DCB2BCB91730017F86B /* jusin-ios-client2 */,
+				76671DDB2BCB91750017F86B /* jusin-ios-client2Tests */,
+				76671DE52BCB91750017F86B /* jusin-ios-client2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76671DCA2BCB91730017F86B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76671DD72BCB91750017F86B /* Preview Assets.xcassets in Resources */,
+				76671DD42BCB91750017F86B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DDA2BCB91750017F86B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DE42BCB91750017F86B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76671DC82BCB91730017F86B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76671DD22BCB91730017F86B /* ContentView.swift in Sources */,
+				76671DD02BCB91730017F86B /* jusin_ios_client2App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DD82BCB91750017F86B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76671DE12BCB91750017F86B /* jusin_ios_client2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76671DE22BCB91750017F86B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76671DED2BCB91750017F86B /* jusin_ios_client2UITestsLaunchTests.swift in Sources */,
+				76671DEB2BCB91750017F86B /* jusin_ios_client2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76671DDE2BCB91750017F86B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76671DCB2BCB91730017F86B /* jusin-ios-client2 */;
+			targetProxy = 76671DDD2BCB91750017F86B /* PBXContainerItemProxy */;
+		};
+		76671DE82BCB91750017F86B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76671DCB2BCB91730017F86B /* jusin-ios-client2 */;
+			targetProxy = 76671DE72BCB91750017F86B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		76671DEE2BCB91750017F86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76671DEF2BCB91750017F86B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76671DF12BCB91750017F86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"jusin-ios-client2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76671DF22BCB91750017F86B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"jusin-ios-client2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		76671DF42BCB91750017F86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jusin-ios-client2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jusin-ios-client2";
+			};
+			name = Debug;
+		};
+		76671DF52BCB91750017F86B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jusin-ios-client2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jusin-ios-client2";
+			};
+			name = Release;
+		};
+		76671DF72BCB91750017F86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "jusin-ios-client2";
+			};
+			name = Debug;
+		};
+		76671DF82BCB91750017F86B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raynic.jusin.jusin-ios-client2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "jusin-ios-client2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76671DC72BCB91730017F86B /* Build configuration list for PBXProject "jusin-ios-client2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76671DEE2BCB91750017F86B /* Debug */,
+				76671DEF2BCB91750017F86B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76671DF02BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76671DF12BCB91750017F86B /* Debug */,
+				76671DF22BCB91750017F86B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76671DF32BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76671DF42BCB91750017F86B /* Debug */,
+				76671DF52BCB91750017F86B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76671DF62BCB91750017F86B /* Build configuration list for PBXNativeTarget "jusin-ios-client2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76671DF72BCB91750017F86B /* Debug */,
+				76671DF82BCB91750017F86B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76671DC42BCB91730017F86B /* Project object */;
+}

@@ -16,8 +16,10 @@ struct ContentView: View {
     @State private var pageNumber = 3     // for displaying
 
     @State private var selectedVoice: AVSpeechSynthesisVoice?
-
+    @State var audioPlayer : AVAudioPlayer?
+    
     var body: some View {
+        
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 // Navigation Arrow/Reset
@@ -71,13 +73,13 @@ struct ContentView: View {
     
     
     func speak(_ word: String) {
-        guard let mp3file = Bundle.main.url(forResource: "sound/\(word)", withExtension: "mp3") else {
+        guard let mp3file = Bundle.main.url(forResource: "\(word)", withExtension: "mp3") else {
             print("MP3 file not found for '\(word)' ")
             return
         }
         do {
-            let audioPlayer = try AVAudioPlayer(contentsOf: mp3file)
-            audioPlayer.play()
+            audioPlayer = try AVAudioPlayer(contentsOf: mp3file)
+            audioPlayer!.play()
         } catch {
             print("Error playing audio: \(error.localizedDescription)")
         }
