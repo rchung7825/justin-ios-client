@@ -24,7 +24,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 // Navigation Arrow/Reset
-                PageControlView(contentVC: contentVC, currentPage: $currentPage, pageNumber: $pageNumber)
+                PageControlView(contentVC: contentVC, currentPage: $currentPage, pageNumber: $pageNumber, ringbuffer: ringBuffer)
                 
                 // Should be Wider
                 Spacer()
@@ -153,11 +153,13 @@ struct PageControlView: View {
     @ObservedObject var contentVC: ContentViewModel
     @Binding var currentPage: Int
     @Binding var pageNumber: Int
+    @State var ringbuffer: RingBuffer<String>
     
     var body: some View {
         VStack(spacing: 10) {
             Button(action: {
                 moveUp(by: 1)
+                ringbuffer.append("up-arrow")
             }) {
                 VStack {
                     Spacer()
@@ -191,6 +193,7 @@ struct PageControlView: View {
             
             Button(action: {
                 moveDown(by: 1)
+                ringbuffer.append("down-arrow")
             }) {
                 VStack {
                     Spacer()
