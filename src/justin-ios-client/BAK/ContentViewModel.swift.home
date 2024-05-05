@@ -4,17 +4,18 @@ import AVFoundation
 class ContentViewModel: ObservableObject {
     let pages = [
         ["", "", "", "", "", "", "", ""],
-        
-        //["Super Simple Songs","Coco Melon","Mario kart", "Asphalt 6", "Little Baby Bum", "Bear in the big blue house", "Mickey Mouse", "Super Why"],
-        ["super-simple-songs","coco-melon","mario-kart", "asphalt-6", "little-baby-bum", "bear-in-the-big-blue-house", "mickey-mouse", "super-why"],
+
+        ["super-simple-songs","coco-melon","little-baby-bum", "bear-in-the-big-blue-house", "mickey-mouse", "super-why", "", ""],
         
         // Home
         ["eat", "music", "bathroom", "drink", "stop", "toy", "go", "different"],
-       
+               
         ["", "", "", "", "", "", "", ""],
-        
-        ["", "", "", "", "", "", "", ""]
-        
+
+        ["mario-kart", "asphalt-6", "", "", "", "", "", ""],
+        //["Super Simple Songs","Coco Melon","Mario kart", "Asphalt 6", "Little Baby Bum", "Bear in the big blue house", "Mickey Mouse", "Super Why"],
+
+
     ]
     
     // Dictionary mapping page names to system image names
