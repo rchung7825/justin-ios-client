@@ -81,6 +81,14 @@ struct ContentView: View {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: mp3file)
             audioPlayer!.play()
+            
+            ringBuffer.append(word)
+            if ringBuffer.isFull() && ringBuffer.containsUniqueElement() {
+                if word == "music" {
+                    currentPage = 1
+                    pageNumber = 2
+                }
+            }
         } catch {
             print("Error playing audio: \(error.localizedDescription)")
         }
