@@ -17,6 +17,7 @@ struct ContentView: View {
 
     @State private var selectedVoice: AVSpeechSynthesisVoice?
     @State var audioPlayer : AVAudioPlayer?
+    @State var ringBuffer = RingBuffer<String>(count: 4)
     
     var body: some View {
         
@@ -155,13 +156,9 @@ struct PageControlView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Button {
-                if currentPage > 0 {
-                    currentPage -= 1
-                    pageNumber -= 1 // Decrease page number when moving up
-                    speakAllButtonLabels()
-                }
-            } label: {
+            Button(action: {
+                moveUp(by: 1)
+            }) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.up")
@@ -192,13 +189,9 @@ struct PageControlView: View {
             
             Spacer()
             
-            Button {
-                if currentPage < contentVC.pages.count - 1 {
-                    currentPage += 1
-                    pageNumber += 1 // Increase page number when moving down
-                    speakAllButtonLabels()
-                }
-            } label: {
+            Button(action: {
+                moveDown(by: 1)
+            }) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.down")
@@ -231,6 +224,22 @@ struct PageControlView: View {
         let utterance = AVSpeechUtterance(string: text)
         utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 0.5 // Set to maximum speech rate
         speak(utterance)
+    }
+    
+    func moveUp(by amount: Int) {
+        if currentPage > 0 {
+            currentPage -= amount
+            pageNumber -= amount // Decrease page number when moving up
+            speakAllButtonLabels()
+        }
+    }
+    
+    func moveDown(by amount: Int) {
+        if currentPage < contentVC.pages.count - amount {
+            currentPage += amount
+            pageNumber += amount // Increase page number when moving down
+            speakAllButtonLabels()
+        }
     }
 }
 

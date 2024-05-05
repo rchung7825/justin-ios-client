@@ -1,30 +1,30 @@
 #/bin/bash
 
-# This script will find summary words, and merge for output
-# We still have to clear the gap between the words.
-#
-
 sound_dir=../src/justin-ios-client/sound
 raw_dir=../mp3-raw
 
+set -e
+
 mkdir -p ${raw_dir}/accel
 
-declare -a summary1=("eat" "mat" "bathroom" "fix" "walk" "music" "drink" "different")
+declare -a summary1=("eat" "music" "bathroom" "drink" "stop" "toy" "go" "different")
 
 exists()
 {
     utilname=$1
     util=$(which $utilname)
-    [[ ! -e ${util} ]] && {
+    [[ -z ${util} ]] && {
 	echo "${utilname} is not installed, or not found in the path."
 	exit 1
     }
 }
+# We can generate summary, from Linux box and check-in.
 exists ffmpeg
 exists mp3wrap     # Well, ffmpeg can also concat:  "search:  and find askubuntu.com" answer.
 exists sox
 
-accel_rate=2       # twice as fast.  (It was 1.8)
+#accel_rate=1.6    # 60% faster
+accel_rate=2       # twice as fast
 generate_accel()
 {
     fname=$1
@@ -42,9 +42,8 @@ generate_accel()
 }
 
 abspath_summary1=
-for mp3 in "${summary1[@]}"; do
+for mp3 in "${arr[@]}"; do
     generate_accel ${raw_dir}/${mp3}.mp3
     abspath_summary1="${abspath_summary1}  ${raw_dir}/accel/${mp3}.mp3"
 done
 mp3wrap  ${sound_dir}/summary-1.mp3  ${abspath_summary1}
-mv ${sound_dir}/{summary-1_MP3WRAP.mp3,summary-1.mp3}

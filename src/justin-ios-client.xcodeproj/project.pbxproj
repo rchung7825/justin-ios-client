@@ -28,6 +28,7 @@
 		9B48DC532BC8D8B00046AF7A /* stop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DC452BC8D8B00046AF7A /* stop.mp3 */; };
 		9B48DC542BC8D8B00046AF7A /* toy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DC462BC8D8B00046AF7A /* toy.mp3 */; };
 		9B48DC552BC8D8B00046AF7A /* walk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DC472BC8D8B00046AF7A /* walk.mp3 */; };
+		9B9942F62BE7DE13000CCB21 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9942F52BE7DE13000CCB21 /* RingBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		9B48DC452BC8D8B00046AF7A /* stop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stop.mp3; sourceTree = "<group>"; };
 		9B48DC462BC8D8B00046AF7A /* toy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toy.mp3; sourceTree = "<group>"; };
 		9B48DC472BC8D8B00046AF7A /* walk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = walk.mp3; sourceTree = "<group>"; };
+		9B9942F52BE7DE13000CCB21 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				9B48DC112BC084BC0046AF7A /* ContentView.swift */,
 				9B48DC132BC084BE0046AF7A /* Assets.xcassets */,
 				9B48DC152BC084BE0046AF7A /* Preview Content */,
+				9B9942F52BE7DE13000CCB21 /* RingBuffer.swift */,
 			);
 			path = "justin-ios-client";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B48DC122BC084BC0046AF7A /* ContentView.swift in Sources */,
+				9B9942F62BE7DE13000CCB21 /* RingBuffer.swift in Sources */,
 				9B48DC102BC084BC0046AF7A /* justin_ios_clientApp.swift in Sources */,
 				9B48DC3A2BC08A550046AF7A /* ContentViewModel.swift in Sources */,
 			);
