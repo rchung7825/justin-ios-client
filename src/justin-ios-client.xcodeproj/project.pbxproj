@@ -29,6 +29,15 @@
 		9B48DC542BC8D8B00046AF7A /* toy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DC462BC8D8B00046AF7A /* toy.mp3 */; };
 		9B48DC552BC8D8B00046AF7A /* walk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B48DC472BC8D8B00046AF7A /* walk.mp3 */; };
 		9B9942F62BE7DE13000CCB21 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9942F52BE7DE13000CCB21 /* RingBuffer.swift */; };
+		9B9942F82BE8040D000CCB21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9B9942F72BE8040D000CCB21 /* README.md */; };
+		9B9942FC2BE80A08000CCB21 /* coco-melon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9942FB2BE80A07000CCB21 /* coco-melon.mp3 */; };
+		9B9942FE2BE80B23000CCB21 /* mario-kart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9942FD2BE80B23000CCB21 /* mario-kart.mp3 */; };
+		9B9943002BE80D73000CCB21 /* asphalt-6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9942FF2BE80D73000CCB21 /* asphalt-6.mp3 */; };
+		9B9943022BE80ECF000CCB21 /* little-baby-bum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943012BE80ECF000CCB21 /* little-baby-bum.mp3 */; };
+		9B9943042BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943032BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 */; };
+		9B9943062BE811DC000CCB21 /* mickey-mouse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943052BE811DC000CCB21 /* mickey-mouse.mp3 */; };
+		9B9943082BE811E1000CCB21 /* super-why.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943072BE811E1000CCB21 /* super-why.mp3 */; };
+		9B99430C2BE812E5000CCB21 /* super-simple-songs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B99430B2BE812E5000CCB21 /* super-simple-songs.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +83,15 @@
 		9B48DC462BC8D8B00046AF7A /* toy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toy.mp3; sourceTree = "<group>"; };
 		9B48DC472BC8D8B00046AF7A /* walk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = walk.mp3; sourceTree = "<group>"; };
 		9B9942F52BE7DE13000CCB21 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		9B9942F72BE8040D000CCB21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9B9942FB2BE80A07000CCB21 /* coco-melon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "coco-melon.mp3"; path = "../../../mp3-raw/coco-melon.mp3"; sourceTree = "<group>"; };
+		9B9942FD2BE80B23000CCB21 /* mario-kart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "mario-kart.mp3"; path = "../../../mp3-raw/mario-kart.mp3"; sourceTree = "<group>"; };
+		9B9942FF2BE80D73000CCB21 /* asphalt-6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "asphalt-6.mp3"; path = "../../../mp3-raw/asphalt-6.mp3"; sourceTree = "<group>"; };
+		9B9943012BE80ECF000CCB21 /* little-baby-bum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "little-baby-bum.mp3"; path = "../../../mp3-raw/little-baby-bum.mp3"; sourceTree = "<group>"; };
+		9B9943032BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bear-in-the-big-blue-house.mp3"; path = "../../../mp3-raw/bear-in-the-big-blue-house.mp3"; sourceTree = "<group>"; };
+		9B9943052BE811DC000CCB21 /* mickey-mouse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "mickey-mouse.mp3"; path = "../../../mp3-raw/mickey-mouse.mp3"; sourceTree = "<group>"; };
+		9B9943072BE811E1000CCB21 /* super-why.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "super-why.mp3"; path = "../../../mp3-raw/super-why.mp3"; sourceTree = "<group>"; };
+		9B99430B2BE812E5000CCB21 /* super-simple-songs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "super-simple-songs.mp3"; path = "../../../mp3-raw/super-simple-songs.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +142,7 @@
 		9B48DC0E2BC084BC0046AF7A /* justin-ios-client */ = {
 			isa = PBXGroup;
 			children = (
+				9B9942F72BE8040D000CCB21 /* README.md */,
 				9B48DC482BC8D8B00046AF7A /* sound */,
 				9B48DC392BC08A550046AF7A /* ContentViewModel.swift */,
 				9B48DC0F2BC084BC0046AF7A /* justin_ios_clientApp.swift */,
@@ -163,6 +182,14 @@
 		9B48DC482BC8D8B00046AF7A /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				9B99430B2BE812E5000CCB21 /* super-simple-songs.mp3 */,
+				9B9942FB2BE80A07000CCB21 /* coco-melon.mp3 */,
+				9B9942FD2BE80B23000CCB21 /* mario-kart.mp3 */,
+				9B9942FF2BE80D73000CCB21 /* asphalt-6.mp3 */,
+				9B9943012BE80ECF000CCB21 /* little-baby-bum.mp3 */,
+				9B9943032BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 */,
+				9B9943052BE811DC000CCB21 /* mickey-mouse.mp3 */,
+				9B9943072BE811E1000CCB21 /* super-why.mp3 */,
 				9B48DC3B2BC8D8B00046AF7A /* bathroom.mp3 */,
 				9B48DC3C2BC8D8B00046AF7A /* different.mp3 */,
 				9B48DC3D2BC8D8B00046AF7A /* drink.mp3 */,
@@ -285,20 +312,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B48DC502BC8D8B00046AF7A /* music.mp3 in Resources */,
+				9B99430C2BE812E5000CCB21 /* super-simple-songs.mp3 in Resources */,
+				9B9942FC2BE80A08000CCB21 /* coco-melon.mp3 in Resources */,
+				9B9943062BE811DC000CCB21 /* mickey-mouse.mp3 in Resources */,
 				9B48DC542BC8D8B00046AF7A /* toy.mp3 in Resources */,
 				9B48DC492BC8D8B00046AF7A /* bathroom.mp3 in Resources */,
 				9B48DC512BC8D8B00046AF7A /* off.mp3 in Resources */,
+				9B9943082BE811E1000CCB21 /* super-why.mp3 in Resources */,
 				9B48DC172BC084BE0046AF7A /* Preview Assets.xcassets in Resources */,
 				9B48DC4E2BC8D8B00046AF7A /* go.mp3 in Resources */,
+				9B9942F82BE8040D000CCB21 /* README.md in Resources */,
+				9B9943022BE80ECF000CCB21 /* little-baby-bum.mp3 in Resources */,
 				9B48DC532BC8D8B00046AF7A /* stop.mp3 in Resources */,
 				9B48DC522BC8D8B00046AF7A /* on.mp3 in Resources */,
+				9B9942FE2BE80B23000CCB21 /* mario-kart.mp3 in Resources */,
 				9B48DC4F2BC8D8B00046AF7A /* mat.mp3 in Resources */,
 				9B48DC4A2BC8D8B00046AF7A /* different.mp3 in Resources */,
+				9B9943042BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 in Resources */,
 				9B48DC4C2BC8D8B00046AF7A /* eat.mp3 in Resources */,
 				9B48DC552BC8D8B00046AF7A /* walk.mp3 in Resources */,
 				9B48DC4D2BC8D8B00046AF7A /* fix.mp3 in Resources */,
 				9B48DC4B2BC8D8B00046AF7A /* drink.mp3 in Resources */,
 				9B48DC142BC084BE0046AF7A /* Assets.xcassets in Resources */,
+				9B9943002BE80D73000CCB21 /* asphalt-6.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
