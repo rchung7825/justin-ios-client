@@ -189,7 +189,7 @@ struct PageControlView: View {
             Button(action: {
                 currentPage = 2
                 pageNumber = 3 // Reset to Home (page 3)
-                speakAllButtonLabels()
+                speakPageSummary()
             }) {
                 Text("Home")
                     .font(.system(size: 20, weight: .bold))
@@ -229,7 +229,7 @@ struct PageControlView: View {
     }
     
     // Function to speak all button labels on the current page
-    func speakAllButtonLabels() {
+    func speakPageSummary() {
         let buttons = contentVC.pages[currentPage].joined(separator: ", ")
         let text = "\(buttons)"
         let utterance = AVSpeechUtterance(string: text)
@@ -241,7 +241,7 @@ struct PageControlView: View {
         if currentPage > 0 {
             currentPage -= amount
             pageNumber -= amount // Decrease page number when moving up
-            speakAllButtonLabels()
+            speakPageSummary()
         }
     }
     
@@ -249,7 +249,7 @@ struct PageControlView: View {
         if currentPage < contentVC.pages.count - amount {
             currentPage += amount
             pageNumber += amount // Increase page number when moving down
-            speakAllButtonLabels()
+            speakPageSummary()
         }
     }
 }
