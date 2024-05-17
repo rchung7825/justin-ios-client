@@ -87,6 +87,15 @@ struct ContentView: View {
                 if word == "music" {
                     currentPage = 1
                     pageNumber = 2
+                    
+                } else if word == "eat" {
+                    currentPage = 3
+                    pageNumber = 4
+            
+                } else if word == "drink" {
+                    currentPage = 4
+                    pageNumber = 5
+      
                 }
             }
         } catch {

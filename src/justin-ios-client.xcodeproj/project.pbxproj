@@ -38,6 +38,11 @@
 		9B9943062BE811DC000CCB21 /* mickey-mouse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943052BE811DC000CCB21 /* mickey-mouse.mp3 */; };
 		9B9943082BE811E1000CCB21 /* super-why.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943072BE811E1000CCB21 /* super-why.mp3 */; };
 		9B99430C2BE812E5000CCB21 /* super-simple-songs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B99430B2BE812E5000CCB21 /* super-simple-songs.mp3 */; };
+		9B99430E2BF6E71B000CCB21 /* candy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B99430D2BF6E71B000CCB21 /* candy.mp3 */; };
+		9B9943102BF6E726000CCB21 /* juice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B99430F2BF6E726000CCB21 /* juice.mp3 */; };
+		9B9943122BF6E72F000CCB21 /* meal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943112BF6E72F000CCB21 /* meal.mp3 */; };
+		9B9943142BF6E739000CCB21 /* snack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943132BF6E739000CCB21 /* snack.mp3 */; };
+		9B9943162BF6E742000CCB21 /* water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9943152BF6E742000CCB21 /* water.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +97,11 @@
 		9B9943052BE811DC000CCB21 /* mickey-mouse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "mickey-mouse.mp3"; path = "../../../mp3-raw/mickey-mouse.mp3"; sourceTree = "<group>"; };
 		9B9943072BE811E1000CCB21 /* super-why.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "super-why.mp3"; path = "../../../mp3-raw/super-why.mp3"; sourceTree = "<group>"; };
 		9B99430B2BE812E5000CCB21 /* super-simple-songs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "super-simple-songs.mp3"; path = "../../../mp3-raw/super-simple-songs.mp3"; sourceTree = "<group>"; };
+		9B99430D2BF6E71B000CCB21 /* candy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = candy.mp3; sourceTree = "<group>"; };
+		9B99430F2BF6E726000CCB21 /* juice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = juice.mp3; sourceTree = "<group>"; };
+		9B9943112BF6E72F000CCB21 /* meal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meal.mp3; sourceTree = "<group>"; };
+		9B9943132BF6E739000CCB21 /* snack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snack.mp3; sourceTree = "<group>"; };
+		9B9943152BF6E742000CCB21 /* water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = water.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +204,15 @@
 				9B48DC3C2BC8D8B00046AF7A /* different.mp3 */,
 				9B48DC3D2BC8D8B00046AF7A /* drink.mp3 */,
 				9B48DC3E2BC8D8B00046AF7A /* eat.mp3 */,
+				9B99430D2BF6E71B000CCB21 /* candy.mp3 */,
+				9B99430F2BF6E726000CCB21 /* juice.mp3 */,
 				9B48DC3F2BC8D8B00046AF7A /* fix.mp3 */,
 				9B48DC402BC8D8B00046AF7A /* go.mp3 */,
+				9B9943152BF6E742000CCB21 /* water.mp3 */,
 				9B48DC412BC8D8B00046AF7A /* mat.mp3 */,
+				9B9943112BF6E72F000CCB21 /* meal.mp3 */,
 				9B48DC422BC8D8B00046AF7A /* music.mp3 */,
+				9B9943132BF6E739000CCB21 /* snack.mp3 */,
 				9B48DC432BC8D8B00046AF7A /* off.mp3 */,
 				9B48DC442BC8D8B00046AF7A /* on.mp3 */,
 				9B48DC452BC8D8B00046AF7A /* stop.mp3 */,
@@ -315,8 +330,10 @@
 				9B99430C2BE812E5000CCB21 /* super-simple-songs.mp3 in Resources */,
 				9B9942FC2BE80A08000CCB21 /* coco-melon.mp3 in Resources */,
 				9B9943062BE811DC000CCB21 /* mickey-mouse.mp3 in Resources */,
+				9B99430E2BF6E71B000CCB21 /* candy.mp3 in Resources */,
 				9B48DC542BC8D8B00046AF7A /* toy.mp3 in Resources */,
 				9B48DC492BC8D8B00046AF7A /* bathroom.mp3 in Resources */,
+				9B9943102BF6E726000CCB21 /* juice.mp3 in Resources */,
 				9B48DC512BC8D8B00046AF7A /* off.mp3 in Resources */,
 				9B9943082BE811E1000CCB21 /* super-why.mp3 in Resources */,
 				9B48DC172BC084BE0046AF7A /* Preview Assets.xcassets in Resources */,
@@ -328,7 +345,10 @@
 				9B9942FE2BE80B23000CCB21 /* mario-kart.mp3 in Resources */,
 				9B48DC4F2BC8D8B00046AF7A /* mat.mp3 in Resources */,
 				9B48DC4A2BC8D8B00046AF7A /* different.mp3 in Resources */,
+				9B9943142BF6E739000CCB21 /* snack.mp3 in Resources */,
 				9B9943042BE81081000CCB21 /* bear-in-the-big-blue-house.mp3 in Resources */,
+				9B9943122BF6E72F000CCB21 /* meal.mp3 in Resources */,
+				9B9943162BF6E742000CCB21 /* water.mp3 in Resources */,
 				9B48DC4C2BC8D8B00046AF7A /* eat.mp3 in Resources */,
 				9B48DC552BC8D8B00046AF7A /* walk.mp3 in Resources */,
 				9B48DC4D2BC8D8B00046AF7A /* fix.mp3 in Resources */,

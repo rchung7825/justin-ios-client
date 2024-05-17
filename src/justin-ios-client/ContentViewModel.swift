@@ -10,7 +10,9 @@ class ContentViewModel: ObservableObject {
         // Home
         ["eat", "music", "bathroom", "drink", "stop", "toy", "go", "different"],
                
-        ["", "", "", "", "", "", "", ""],
+        ["meal", "snack", "candy", "", "", "", "", ""],
+        
+        ["water", "juice", "", "", "", "", "", "" ],
 
         ["mario-kart", "asphalt-6", "", "", "", "", "", ""],
         //["Super Simple Songs","Coco Melon","Mario kart", "Asphalt 6", "Little Baby Bum", "Bear in the big blue house", "Mickey Mouse", "Super Why"],
