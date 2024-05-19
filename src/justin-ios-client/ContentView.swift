@@ -80,6 +80,7 @@ struct ContentView: View {
         }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: mp3file)
+            audioPlayer!.stop()
             audioPlayer!.play()
             
             ringBuffer.append(word)
