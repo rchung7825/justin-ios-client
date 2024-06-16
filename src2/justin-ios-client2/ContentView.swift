@@ -31,7 +31,6 @@ struct ContentView: View {
     @StateObject var contentViewModel = ContentViewModel()
     @State private var currentPage = 2
     @State private var pageNumber = 3
-    @State private var audioPlayer: AVAudioPlayer?
 
     var body: some View {
         GeometryReader { geometry in
@@ -42,9 +41,11 @@ struct ContentView: View {
                 
                 PageGrid(pageLabels: contentViewModel.pages[currentPage],
                          shortPressAction: { label in
+                             // Placeholder for playing MP3
                              playMP3(for: label)
                          },
                          longPressAction: { label in
+                             // Placeholder for switching pages
                              switchPage(for: label)
                          })
                     .frame(width: geometry.size.width * 0.7)
@@ -55,36 +56,13 @@ struct ContentView: View {
         }
     }
     
-    // Function to play MP3
+    // Entry point for playing MP3
     func playMP3(for label: String) {
-        guard !label.isEmpty else { return }
-        
-        if let previousPlayer = audioPlayer, previousPlayer.isPlaying {
-            previousPlayer.stop()
-        }
-        
-        // Debugging print statement to show the path being used
-        if let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3", subdirectory: "mp3") {
-            print("Found MP3 file at path: \(mp3URL.path)")
-        } else {
-            print("MP3 file not found for '\(label)':  mp3/\(label) ")
-            return
-        }
-        
-        guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3", subdirectory: "mp3") else {
-            print("MP3 file not found for '\(label)'")
-            return
-        }
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
-            audioPlayer?.play()
-        } catch {
-            print("Error playing audio: \(error.localizedDescription)")
-        }
+        // Implement the functionality to play MP3 here
+        print("Playing MP3 for \(label)")
     }
     
-    // Function to switch pages (placeholder)
+    // Entry point for switching pages
     func switchPage(for label: String) {
         // Implement the functionality to switch pages here
         print("Switching page for \(label)")
@@ -97,9 +75,7 @@ struct NavigationButtons: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Button(action: {
-                // Implement the functionality to move up
-            }) {
+            Button(action: {}) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.up")
@@ -116,9 +92,7 @@ struct NavigationButtons: View {
             
             Spacer()
             
-            Button(action: {
-                // Implement the functionality to go to home
-            }) {
+            Button(action: {}) {
                 Text("Home")
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 150, height: UIScreen.main.bounds.height * 0.2)
@@ -127,9 +101,7 @@ struct NavigationButtons: View {
             
             Spacer()
             
-            Button(action: {
-                // Implement the functionality to move down
-            }) {
+            Button(action: {}) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.down")
