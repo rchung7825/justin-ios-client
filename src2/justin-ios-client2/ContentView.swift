@@ -31,6 +31,7 @@ struct ContentView: View {
     @StateObject var contentViewModel = ContentViewModel()
     @State private var currentPage = 2
     @State private var pageNumber = 3
+    @State private var audioPlayer: AVAudioPlayer?
 
     var body: some View {
         GeometryReader { geometry in
@@ -41,11 +42,9 @@ struct ContentView: View {
                 
                 PageGrid(pageLabels: contentViewModel.pages[currentPage],
                          shortPressAction: { label in
-                             // Placeholder for playing MP3
                              playMP3(for: label)
                          },
                          longPressAction: { label in
-                             // Placeholder for switching pages
                              switchPage(for: label)
                          })
                     .frame(width: geometry.size.width * 0.7)
@@ -56,13 +55,28 @@ struct ContentView: View {
         }
     }
     
-    // Entry point for playing MP3
+    // Function to play MP3
     func playMP3(for label: String) {
-        // Implement the functionality to play MP3 here
-        print("Playing MP3 for \(label)")
+        guard !label.isEmpty else { return }
+        
+        if let previousPlayer = audioPlayer, previousPlayer.isPlaying {
+            previousPlayer.stop()
+        }
+        
+        guard let mp3URL = Bundle.main.url(forResource: "mp3/\(label)", withExtension: "mp3") else {
+            print("MP3 file not found for '\(label)'")
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing audio: \(error.localizedDescription)")
+        }
     }
     
-    // Entry point for switching pages
+    // Function to switch pages (placeholder)
     func switchPage(for label: String) {
         // Implement the functionality to switch pages here
         print("Switching page for \(label)")
@@ -75,7 +89,9 @@ struct NavigationButtons: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Button(action: {}) {
+            Button(action: {
+                // Implement the functionality to move up
+            }) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.up")
@@ -92,7 +108,9 @@ struct NavigationButtons: View {
             
             Spacer()
             
-            Button(action: {}) {
+            Button(action: {
+                // Implement the functionality to go to home
+            }) {
                 Text("Home")
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 150, height: UIScreen.main.bounds.height * 0.2)
@@ -101,7 +119,9 @@ struct NavigationButtons: View {
             
             Spacer()
             
-            Button(action: {}) {
+            Button(action: {
+                // Implement the functionality to move down
+            }) {
                 VStack {
                     Spacer()
                     Image(systemName: "arrow.down")
