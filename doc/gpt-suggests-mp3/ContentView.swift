@@ -64,14 +64,14 @@ struct ContentView: View {
         }
         
         // Debugging print statement to show the path being used
-        if let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") {
+        if let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3", subdirectory: "mp3") {
             print("Found MP3 file at path: \(mp3URL.path)")
         } else {
             print("MP3 file not found for '\(label)'")
             return
         }
         
-        guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") else {
+        guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3", subdirectory: "mp3") else {
             print("MP3 file not found for '\(label)'")
             return
         }
