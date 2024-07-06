@@ -4,12 +4,16 @@ import AVFoundation
 class ContentViewModel: ObservableObject {
     let pages = [
         ["", "", "", "", "", "", "", ""],
+        // "music" long-press will lead to this page:
         ["super-simple-songs","coco-melon","little-baby-bum", "bear-in-the-big-blue-house", "mickey-mouse", "super-why", "", ""],
         // Home
         ["eat", "music", "bathroom", "drink", "stop", "toy", "go", "different"],
+        // "eat" long-press will lead to this:
         ["meal", "snack", "candy", "", "", "", "", ""],
+        // "drink" will lead to this:
         ["water", "juice", "", "", "", "", "", "" ],
-        ["mario-kart", "asphalt-6", "", "", "", "", "", ""],
+        // Only accessible by up/down navigation
+        ["mario-kart", "asphalt-6", "mario-party", "", "", "", "", ""],
     ]
     
     // Dictionary mapping page names to system image names
@@ -37,6 +41,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber)
+                    .environmentObject(contentViewModel)
                 
                 Spacer()
                 
@@ -63,14 +68,6 @@ struct ContentView: View {
             previousPlayer.stop()
         }
         
-        // Debugging print statement to show the path being used
-        if let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") {
-            print("Found MP3 file at path: \(mp3URL.path)")
-        } else {
-            print("MP3 file not found for '\(label)'")
-            return
-        }
-        
         guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") else {
             print("MP3 file not found for '\(label)'")
             return
@@ -84,21 +81,33 @@ struct ContentView: View {
         }
     }
     
-    // Function to switch pages (placeholder)
+    // Function to switch pages
     func switchPage(for label: String) {
-        // Implement the functionality to switch pages here
-        print("Switching page for \(label)")
+        switch label {
+        case "music":
+            currentPage = 1
+        case "eat":
+            currentPage = 3
+        case "drink":
+            currentPage = 4
+        default:
+            print("No associated page for \(label)")
+        }
     }
 }
 
 struct NavigationButtons: View {
     @Binding var currentPage: Int
     @Binding var pageNumber: Int
+    @EnvironmentObject var contentViewModel: ContentViewModel
     
     var body: some View {
         VStack(spacing: 10) {
             Button(action: {
-                // Implement the functionality to move up
+                // Move up if not at the top page
+                if currentPage > 0 {
+                    currentPage -= 1
+                }
             }) {
                 VStack {
                     Spacer()
@@ -117,7 +126,8 @@ struct NavigationButtons: View {
             Spacer()
             
             Button(action: {
-                // Implement the functionality to go to home
+                // Go to home page
+                currentPage = 2
             }) {
                 Text("Home")
                     .font(.system(size: 20, weight: .bold))
@@ -128,7 +138,10 @@ struct NavigationButtons: View {
             Spacer()
             
             Button(action: {
-                // Implement the functionality to move down
+                // Move down if not at the bottom page
+                if currentPage < contentViewModel.pages.count - 1 {
+                    currentPage += 1
+                }
             }) {
                 VStack {
                     Spacer()
