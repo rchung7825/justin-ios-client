@@ -15,7 +15,7 @@ class ContentViewModel: ObservableObject {
         // Only accessible by up/down navigation
         ["mario-kart", "asphalt-6", "mario-party", "", "", "", "", ""],
     ]
-    
+
     // Dictionary mapping page names to system image names
     let imageNames: [String: String] = [
         "eat": "leaf.fill",
@@ -27,7 +27,7 @@ class ContentViewModel: ObservableObject {
         "toy": "gamecontroller.fill",
         "go": "arrow.right.circle.fill",
     ]
-    
+
     let synthesizer = AVSpeechSynthesizer()
 }
 
@@ -42,15 +42,15 @@ struct ContentView: View {
             HStack(spacing: 0) {
                 NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber)
                     .environmentObject(contentViewModel)
-                
+
                 Spacer()
-                
+
                 PageGrid(pageLabels: contentViewModel.pages[currentPage],
                          shortPressAction: { label in
                              playMP3(for: label)
                          },
                          longPressAction: { label in
-                             switchPage(for: label)
+                             playMP3AndSwitchPage(for: label)
                          })
                     .frame(width: geometry.size.width * 0.7)
                     .padding(.leading, 100)
@@ -59,20 +59,20 @@ struct ContentView: View {
             .padding()
         }
     }
-    
+
     // Function to play MP3
     func playMP3(for label: String) {
         guard !label.isEmpty else { return }
-        
+
         if let previousPlayer = audioPlayer, previousPlayer.isPlaying {
             previousPlayer.stop()
         }
-        
+
         guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") else {
             print("MP3 file not found for '\(label)'")
             return
         }
-        
+
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
             audioPlayer?.play()
@@ -80,18 +80,21 @@ struct ContentView: View {
             print("Error playing audio: \(error.localizedDescription)")
         }
     }
-    
-    // Function to switch pages
-    func switchPage(for label: String) {
-        switch label {
-        case "music":
-            currentPage = 1
-        case "eat":
-            currentPage = 3
-        case "drink":
-            currentPage = 4
-        default:
-            print("No associated page for \(label)")
+
+    // Function to switch pages after playing MP3
+    func playMP3AndSwitchPage(for label: String) {
+        playMP3(for: label)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Add delay before switching page
+            switch label {
+            case "music":
+                currentPage = 1
+            case "eat":
+                currentPage = 3
+            case "drink":
+                currentPage = 4
+            default:
+                print("No associated page for \(label)")
+            }
         }
     }
 }
@@ -100,13 +103,17 @@ struct NavigationButtons: View {
     @Binding var currentPage: Int
     @Binding var pageNumber: Int
     @EnvironmentObject var contentViewModel: ContentViewModel
-    
+    @State private var audioPlayer: AVAudioPlayer?
+
     var body: some View {
         VStack(spacing: 10) {
             Button(action: {
-                // Move up if not at the top page
-                if currentPage > 0 {
-                    currentPage -= 1
+                playMP3(for: "up")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
+                    // Move up if not at the top page
+                    if currentPage > 0 {
+                        currentPage -= 1
+                    }
                 }
             }) {
                 VStack {
@@ -122,25 +129,30 @@ struct NavigationButtons: View {
                 .frame(minWidth: 150, maxHeight: .infinity)
                 .border(Color.black)
             }
-            
+
             Spacer()
-            
+
             Button(action: {
-                // Go to home page
-                currentPage = 2
+                playMP3(for: "home")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
+                    currentPage = 2
+                }
             }) {
                 Text("Home")
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 150, height: UIScreen.main.bounds.height * 0.2)
             }
             .border(Color.black)
-            
+
             Spacer()
-            
+
             Button(action: {
-                // Move down if not at the bottom page
-                if currentPage < contentViewModel.pages.count - 1 {
-                    currentPage += 1
+                playMP3(for: "down")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Add delay before switching page
+                    // Move down if not at the bottom page
+                    if currentPage < contentViewModel.pages.count - 1 {
+                        currentPage += 1
+                    }
                 }
             }) {
                 VStack {
@@ -158,18 +170,39 @@ struct NavigationButtons: View {
             }
         }
     }
+
+    // Function to play MP3 for navigation buttons
+    func playMP3(for label: String) {
+        guard !label.isEmpty else { return }
+
+        if let previousPlayer = audioPlayer, previousPlayer.isPlaying {
+            previousPlayer.stop()
+        }
+
+        guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") else {
+            print("MP3 file not found for '\(label)'")
+            return
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing audio: \(error.localizedDescription)")
+        }
+    }
 }
 
 struct PageGrid: View {
     let pageLabels: [String]
     let shortPressAction: (String) -> Void
     let longPressAction: (String) -> Void
-    
+
     var body: some View {
         GridStack(rows: 2, columns: 4, spacing: 10) { row, col in
             let index = row * 4 + col
             let label = pageLabels[index]
-            
+
             Button(action: {
                 shortPressAction(label)
             }) {
@@ -197,14 +230,14 @@ struct GridStack<Content: View>: View {
     let columns: Int
     let spacing: CGFloat
     let content: (Int, Int) -> Content
-    
+
     init(rows: Int, columns: Int, spacing: CGFloat, @ViewBuilder content: @escaping (Int, Int) -> Content) {
         self.rows = rows
         self.columns = columns
         self.spacing = spacing
         self.content = content
     }
-    
+
     var body: some View {
         VStack(spacing: spacing) {
             ForEach(0..<rows, id: \.self) { row in
@@ -223,4 +256,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
