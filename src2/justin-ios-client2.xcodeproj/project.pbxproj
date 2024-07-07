@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5D27EA2C3AF9C700E7B811 /* home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B5D27E92C3AF9C700E7B811 /* home.mp3 */; };
 		9BB17FF32C1DD8D300D068D5 /* justin_ios_client2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB17FF22C1DD8D300D068D5 /* justin_ios_client2App.swift */; };
 		9BB17FF52C1DD8D300D068D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB17FF42C1DD8D300D068D5 /* ContentView.swift */; };
 		9BB17FF72C1DD8D600D068D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB17FF62C1DD8D600D068D5 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B5D27E92C3AF9C700E7B811 /* home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = home.mp3; path = "../../mp3-raw/home.mp3"; sourceTree = "<group>"; };
 		9BB17FEF2C1DD8D300D068D5 /* justin-ios-client2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "justin-ios-client2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB17FF22C1DD8D300D068D5 /* justin_ios_client2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justin_ios_client2App.swift; sourceTree = "<group>"; };
 		9BB17FF42C1DD8D300D068D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		9BB180332C204B5400D068D5 /* mp3 */ = {
 			isa = PBXGroup;
 			children = (
+				9B5D27E92C3AF9C700E7B811 /* home.mp3 */,
 				9BB1801E2C204B5400D068D5 /* asphalt-6.mp3 */,
 				9BB1801F2C204B5400D068D5 /* bathroom.mp3 */,
 				9BB180202C204B5400D068D5 /* bear-in-the-big-blue-house.mp3 */,
@@ -325,6 +328,7 @@
 				9BB180472C204B5400D068D5 /* toy.mp3 in Resources */,
 				9BB180442C204B5400D068D5 /* stop.mp3 in Resources */,
 				9BB1803F2C204B5400D068D5 /* mat.mp3 in Resources */,
+				9B5D27EA2C3AF9C700E7B811 /* home.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
