@@ -84,7 +84,7 @@ struct ContentView: View {
     // Function to switch pages after playing MP3
     func playMP3AndSwitchPage(for label: String) {
         playMP3(for: label)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Add delay before switching page
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
             switch label {
             case "music":
                 currentPage = 1
@@ -148,7 +148,7 @@ struct NavigationButtons: View {
 
             Button(action: {
                 playMP3(for: "down")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Add delay before switching page
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
                     // Move down if not at the bottom page
                     if currentPage < contentViewModel.pages.count - 1 {
                         currentPage += 1
@@ -256,3 +256,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
