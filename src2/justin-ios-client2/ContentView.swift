@@ -1,7 +1,14 @@
 import SwiftUI
 import AVFoundation
 
+// VERSION history
+//
+// 2024-08-06: Initial
+//
+
 class ContentViewModel: ObservableObject {
+    let build_version = "2024-08-06"
+    
     let pages = [
         ["", "", "", "", "", "", "", ""],
         // "music" long-press will lead to this page:
@@ -138,7 +145,7 @@ struct NavigationButtons: View {
                     currentPage = 2
                 }
             }) {
-                Text("Home")
+                Text("Home\n" + contentViewModel.build_version)
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 150, height: UIScreen.main.bounds.height * 0.2)
             }
