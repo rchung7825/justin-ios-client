@@ -1,13 +1,14 @@
 import SwiftUI
 import AVFoundation
+import Foundation
 
 // VERSION history
-//
 // 2024-08-06: Initial
+// 2024-09-08: Adding 4 clicks to page.
 //
 
 class ContentViewModel: ObservableObject {
-    let build_version = "2024-08-06"
+    let build_version = "2024-09-08"
     
     let pages = [
         ["", "", "", "", "", "", "", ""],
@@ -38,16 +39,65 @@ class ContentViewModel: ObservableObject {
     let synthesizer = AVSpeechSynthesizer()
 }
 
+struct RingBuffer<T: Hashable> {
+    private var array: [T?]
+    private var writeIndex = 0
+    
+    init(count: Int) {
+        array = Array(repeating: nil, count: count)
+    }
+    
+    mutating func append(_ element: T) {
+        array[writeIndex] = element
+        writeIndex = (writeIndex + 1) % array.count
+    }
+    
+    func isFull() -> Bool {
+        return array.allSatisfy { $0 != nil }
+    }
+    
+    func containsUniqueElement() -> Bool {
+        let uniqueElements = Set(array.compactMap { $0 })
+        return uniqueElements.count == 1
+    }
+    
+    mutating func clear() {
+        array = Array(repeating: nil, count: array.count)
+        writeIndex = 0
+    }
+    
+    func mostRecentEvent() -> T? {
+        guard let lastElement = array[(writeIndex + array.count - 1) % array.count] else {
+            return nil
+        }
+        return lastElement
+    }
+    
+    func eventBeforeMostRecent() -> T? {
+        let index = (writeIndex + array.count - 2) % array.count
+        guard let element = array[index] else {
+            // If buffer is not full, return nil
+            return nil
+        }
+        return element
+    }
+    
+}
+
+
 struct ContentView: View {
     @StateObject var contentViewModel = ContentViewModel()
     @State private var currentPage = 2
     @State private var pageNumber = 3
     @State private var audioPlayer: AVAudioPlayer?
+    
+    @State var ringBuffer = RingBuffer<String>(count: 4)
+    
 
     var body: some View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
-                NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber)
+                NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber, audioPlayer: $audioPlayer)
                     .environmentObject(contentViewModel)
 
                 Spacer()
@@ -73,6 +123,20 @@ struct ContentView: View {
 
         if let previousPlayer = audioPlayer, previousPlayer.isPlaying {
             previousPlayer.stop()
+        }
+        
+        ringBuffer.append(label)
+        if ringBuffer.isFull() && ringBuffer.containsUniqueElement() {
+            switch label {
+            case "music":
+                currentPage = 1
+            case "eat":
+                currentPage = 3
+            case "drink":
+                currentPage = 4
+            default:
+                print("No associated page for \(label)")
+            }
         }
 
         guard let mp3URL = Bundle.main.url(forResource: label, withExtension: "mp3") else {
@@ -109,8 +173,9 @@ struct ContentView: View {
 struct NavigationButtons: View {
     @Binding var currentPage: Int
     @Binding var pageNumber: Int
+    @Binding var audioPlayer: AVAudioPlayer?
+
     @EnvironmentObject var contentViewModel: ContentViewModel
-    @State private var audioPlayer: AVAudioPlayer?
 
     var body: some View {
         VStack(spacing: 10) {
