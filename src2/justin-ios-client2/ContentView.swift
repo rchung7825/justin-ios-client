@@ -5,10 +5,10 @@ import Foundation
 // VERSION history
 // 2024-08-06: Initial
 // 2024-09-08: Adding 4 clicks to page.
-//
+// 2025-03-12: Home is renamed to "Top Menu"
 
 class ContentViewModel: ObservableObject {
-    let build_version = "2024-09-08"
+    let build_version = "2025-03-12"
     
     let pages = [
         ["", "", "", "", "", "", "", ""],
@@ -205,12 +205,12 @@ struct NavigationButtons: View {
             Spacer()
 
             Button(action: {
-                playMP3(for: "home")
+                playMP3(for: "top-menu")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
                     currentPage = 2
                 }
             }) {
-                Text("Home\n" + contentViewModel.build_version)
+                Text("Top Menu\n" + contentViewModel.build_version)
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 150, height: UIScreen.main.bounds.height * 0.2)
             }
