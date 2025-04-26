@@ -6,9 +6,10 @@ import Foundation
 // 2024-08-06: Initial
 // 2024-09-08: Adding 4 clicks to page.
 // 2025-03-12: Home is renamed to "Top Menu"
+// 2025-04-26: Explicitly emptying ring-buffer.  "Top menu" will clear the ring buffer.
 
 class ContentViewModel: ObservableObject {
-    let build_version = "2025-03-12"
+    let build_version = "2025-04-26"
     
     let pages = [
         ["", "", "", "", "", "", "", ""],
@@ -62,7 +63,9 @@ struct RingBuffer<T: Hashable> {
     }
     
     mutating func clear() {
-        array = Array(repeating: nil, count: array.count)
+        for i in 0..<array.count {
+            array[i] = nil
+        }
         writeIndex = 0
     }
     
@@ -97,7 +100,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
-                NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber, audioPlayer: $audioPlayer)
+                NavigationButtons(currentPage: $currentPage, pageNumber: $pageNumber, audioPlayer: $audioPlayer, ringBuffer: $ringBuffer)
                     .environmentObject(contentViewModel)
 
                 Spacer()
@@ -174,6 +177,7 @@ struct NavigationButtons: View {
     @Binding var currentPage: Int
     @Binding var pageNumber: Int
     @Binding var audioPlayer: AVAudioPlayer?
+    @Binding var ringBuffer: RingBuffer<String>
 
     @EnvironmentObject var contentViewModel: ContentViewModel
 
@@ -206,6 +210,7 @@ struct NavigationButtons: View {
 
             Button(action: {
                 playMP3(for: "top-menu")
+                ringBuffer.clear()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Add delay before switching page
                     currentPage = 2
                 }
