@@ -1,0 +1,13 @@
+#  Somehow, macbook does not recognize iPad any more.
+
+Troubleshot:
+
+1. Reboot iPad and Check:
+  - Developer Mode:  On
+  - 
+
+
+2025-08-16
+
+Check iOS update as well. (which will reboot the device)
+
