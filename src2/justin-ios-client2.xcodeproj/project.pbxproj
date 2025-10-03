@@ -17,6 +17,12 @@
 		9B5D27F82C3B18AE00E7B811 /* water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B5D27F72C3B18AE00E7B811 /* water.mp3 */; };
 		9B5D27FA2C3B18B300E7B811 /* juice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B5D27F92C3B18B300E7B811 /* juice.mp3 */; };
 		9B63C52C2D825FB200AEBED2 /* top-menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B63C52B2D825FB200AEBED2 /* top-menu.mp3 */; };
+		9B9FB9C82E90600900E1FB45 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9C62E90600900E1FB45 /* ContentViewModel.swift */; };
+		9B9FB9CE2E90605B00E1FB45 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9CC2E90605B00E1FB45 /* AudioPlayer.swift */; };
+		9B9FB9D12E90606700E1FB45 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9CF2E90606700E1FB45 /* RingBuffer.swift */; };
+		9B9FB9D72E90606E00E1FB45 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9D22E90606E00E1FB45 /* GridStack.swift */; };
+		9B9FB9D82E90606E00E1FB45 /* NavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9D42E90606E00E1FB45 /* NavigationButtons.swift */; };
+		9B9FB9D92E90606E00E1FB45 /* PageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FB9D52E90606E00E1FB45 /* PageGrid.swift */; };
 		9BB17FF32C1DD8D300D068D5 /* justin_ios_client2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB17FF22C1DD8D300D068D5 /* justin_ios_client2App.swift */; };
 		9BB17FF52C1DD8D300D068D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB17FF42C1DD8D300D068D5 /* ContentView.swift */; };
 		9BB17FF72C1DD8D600D068D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB17FF62C1DD8D600D068D5 /* Assets.xcassets */; };
@@ -75,6 +81,12 @@
 		9B5D27F72C3B18AE00E7B811 /* water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = water.mp3; path = "../../mp3-raw/water.mp3"; sourceTree = "<group>"; };
 		9B5D27F92C3B18B300E7B811 /* juice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = juice.mp3; path = "../../mp3-raw/juice.mp3"; sourceTree = "<group>"; };
 		9B63C52B2D825FB200AEBED2 /* top-menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "top-menu.mp3"; sourceTree = "<group>"; };
+		9B9FB9C62E90600900E1FB45 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		9B9FB9CC2E90605B00E1FB45 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		9B9FB9CF2E90606700E1FB45 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		9B9FB9D22E90606E00E1FB45 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		9B9FB9D42E90606E00E1FB45 /* NavigationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtons.swift; sourceTree = "<group>"; };
+		9B9FB9D52E90606E00E1FB45 /* PageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageGrid.swift; sourceTree = "<group>"; };
 		9BB17FEF2C1DD8D300D068D5 /* justin-ios-client2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "justin-ios-client2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB17FF22C1DD8D300D068D5 /* justin_ios_client2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justin_ios_client2App.swift; sourceTree = "<group>"; };
 		9BB17FF42C1DD8D300D068D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +145,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B9FB9C72E90600900E1FB45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FB9C62E90600900E1FB45 /* ContentViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B9FB9CD2E90605B00E1FB45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FB9CC2E90605B00E1FB45 /* AudioPlayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9B9FB9D02E90606700E1FB45 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FB9CF2E90606700E1FB45 /* RingBuffer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9B9FB9D32E90606E00E1FB45 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FB9D22E90606E00E1FB45 /* GridStack.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9B9FB9D62E90606E00E1FB45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B9FB9D32E90606E00E1FB45 /* Components */,
+				9B9FB9D42E90606E00E1FB45 /* NavigationButtons.swift */,
+				9B9FB9D52E90606E00E1FB45 /* PageGrid.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9BB17FE62C1DD8D300D068D5 = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +213,12 @@
 				9BB17FF22C1DD8D300D068D5 /* justin_ios_client2App.swift */,
 				9BB17FF42C1DD8D300D068D5 /* ContentView.swift */,
 				9BB17FF62C1DD8D600D068D5 /* Assets.xcassets */,
+				9B9FB9C72E90600900E1FB45 /* Models */,
 				9BB180332C204B5400D068D5 /* mp3 */,
 				9BB17FF82C1DD8D600D068D5 /* Preview Content */,
+				9B9FB9CD2E90605B00E1FB45 /* Services */,
+				9B9FB9D02E90606700E1FB45 /* Utilities */,
+				9B9FB9D62E90606E00E1FB45 /* Views */,
 			);
 			path = "justin-ios-client2";
 			sourceTree = "<group>";
@@ -390,7 +448,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB17FF52C1DD8D300D068D5 /* ContentView.swift in Sources */,
+				9B9FB9D12E90606700E1FB45 /* RingBuffer.swift in Sources */,
 				9BB17FF32C1DD8D300D068D5 /* justin_ios_client2App.swift in Sources */,
+				9B9FB9C82E90600900E1FB45 /* ContentViewModel.swift in Sources */,
+				9B9FB9CE2E90605B00E1FB45 /* AudioPlayer.swift in Sources */,
+				9B9FB9D72E90606E00E1FB45 /* GridStack.swift in Sources */,
+				9B9FB9D82E90606E00E1FB45 /* NavigationButtons.swift in Sources */,
+				9B9FB9D92E90606E00E1FB45 /* PageGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
